@@ -96,7 +96,7 @@ pub fn check_degrees(degrees: &[f64]) -> bool {
 }
 
 pub fn check_coord(id: Coord, coord: f64) -> bool {
-    if (id as u8) < 3 {
+    if (id as u8) <= 3 {
         true
     } else {
         check_range(coord, -180.0, 180.0)
