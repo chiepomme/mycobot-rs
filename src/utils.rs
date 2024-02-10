@@ -107,5 +107,5 @@ pub fn check_coords(coords: &[f64]) -> bool {
     coords
         .iter()
         .enumerate()
-        .all(|(i, c)| check_coord(Coord::from_u32(i as u32 + 1).unwrap(), *c))
+        .all(|(i, c)| check_coord(Coord::from_u32(i as u32).unwrap(), *c))
 }
