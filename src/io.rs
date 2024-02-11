@@ -25,7 +25,7 @@ impl Serial {
 impl Connection for Serial {
     fn write(&mut self, command: &[u8]) -> Result<()> {
         self.port.write_all(command)?;
-        thread::sleep(Duration::from_millis(50));
+        thread::sleep(Duration::from_millis(1));
         Ok(())
     }
     fn read(&mut self) -> Result<Vec<u8>> {
